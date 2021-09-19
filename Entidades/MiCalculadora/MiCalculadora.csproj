@@ -11,17 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="EfectoSonido.Designer.cs">
+    <Compile Update="Recursos.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>EfectoSonido.resx</DependentUpon>
+      <DependentUpon>Recursos.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="EfectoSonido.resx">
+    <EmbeddedResource Update="Recursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>EfectoSonido.Designer.cs</LastGenOutput>
+      <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

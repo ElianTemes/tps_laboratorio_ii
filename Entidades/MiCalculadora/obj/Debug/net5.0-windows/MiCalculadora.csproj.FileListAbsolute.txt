@@ -19,5 +19,5 @@ C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\obj\Debug
 C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
 C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
 C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete
-C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.EfectoSonido.resources
 C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FormGif.resources
+C:\Users\elian\source\repos\tps_laboratorio_ii\Entidades\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.Recursos.resources

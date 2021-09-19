@@ -50,7 +50,7 @@ namespace MiCalculadora
             this.btnOperar.TabIndex = 4;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
-            this.btnOperar.Click += new System.EventHandler(this.BtnOperar_ClickAsync);
+            this.btnOperar.Click += new System.EventHandler(this.BtnOperar_Click);
             // 
             // btnLimpiar
             // 
@@ -159,6 +159,9 @@ namespace MiCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackgroundImage = global::MiCalculadora.Recursos.chano;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(855, 330);
             this.Controls.Add(this.lblIgualdad);
             this.Controls.Add(this.lblResultado);

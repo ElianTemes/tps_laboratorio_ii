@@ -14,16 +14,23 @@ using System.Windows.Forms;
 namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
-    {        
+    {
         public FormCalculadora()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Al cargar el formulario llama al metodo Limpiar y a la fiesta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
             Limpiar();
         }
+        /// <summary>
+        /// Limpia los datos que tenga txtNumero1, txtNumero2, lblResultado y cmbOperador
+        /// </summary>
         private void Limpiar()
         {
             txtNumero1.Clear();
@@ -31,22 +38,42 @@ namespace MiCalculadora
             lblResultado.Text = " ";
             cmbOperador.SelectedIndex = -1;
         }
+        /// <summary>
+        /// Al presionar el boton "Limpiar" llama al metodo limpiar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
+        /// <summary>
+        /// Recibe tres strings, dos numeros y un operador, llama al metodo Calculadora.Operar y retorna el resultado
+        /// de la operacion
+        /// </summary>
+        /// <param name="numero1"></param>
+        /// <param name="numero2"></param>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         private static double Operar(string numero1, string numero2, string operador)
         {
-            Operando num1 = new Operando(numero1);
-            Operando num2 = new Operando(numero2);
+            Operando num1 = new(numero1);
+            Operando num2 = new(numero2);
             return Calculadora.Operar(num1, num2, char.Parse(operador));
         }
-
-        private void BtnOperar_ClickAsync(object sender, EventArgs e)
+        /// <summary>
+        /// Al presionar el boton Operar, hace la operacion pertinente entre los dos numeros de los Textbox
+        /// y muestra el resultado en el Label de resultado, ademas, le da play a tremenda cancion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnOperar_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new();
+            SoundPlayer Chanito = new(Recursos.ciudadMagica);
+            Chanito.Play();
 
-            if(cmbOperador.SelectedItem is null)
+            if (cmbOperador.SelectedItem is null)
             {
                 cmbOperador.SelectedItem = "+";
             }
@@ -54,7 +81,7 @@ namespace MiCalculadora
             {
                 FormGif FormGif = new();
                 FormGif.Show();
-                SoundPlayer OmaeWo = new(MiCalculadora.EfectoSonido.omaeWo);
+                SoundPlayer OmaeWo = new(Recursos.omaewo);
                 OmaeWo.Play();
             }
             string resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.SelectedItem.ToString().Trim()).ToString();
@@ -83,10 +110,20 @@ namespace MiCalculadora
             }
                 lstOperaciones.Items.Add(sb.ToString());    
         }
+        /// <summary>
+        /// Al presionar el boton cerrar, cierra el programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
+        /// <summary>
+        /// En el evento de que el formulario este por cerrar, le pregunta al usuario si esta seguro que desea salir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Seguro que desea salir?", "Cierre de Calculadora", 
@@ -96,6 +133,12 @@ namespace MiCalculadora
                 e.Cancel = true;
             }
         }
+        /// <summary>
+        /// Al presionar el boton Convertir a Binario, convierte  el resultado mostrado en lblResultado en un binario
+        /// de ser posible, si no, muestra el string "Valor invalido"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnConvertirABinario_Click(object sender, EventArgs e)
         {
             string valorActual = lblResultado.Text;
@@ -110,16 +153,22 @@ namespace MiCalculadora
                 lblResultado.Text = valorActual;
             }
         }
+        /// <summary>
+        /// Al presionar el boton Convertir a Decimal, si el numero mostrado en lblResultado es un binario
+        /// lo convierte a decimal, caso contrario muestra en lblResultado el string "Valor invalido"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string valorActual = lblResultado.Text;
-            if(Operando.BinarioDecimal(lblResultado.Text) != "Valor inválido")
+            if(Operando.BinarioDecimal(lblResultado.Text.Trim()) != "Valor inválido")
             {
-                lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
+                lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text.Trim());
             }
             else
             {
-                lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text);
+                lblResultado.Text = Operando.BinarioDecimal(lblResultado.Text.Trim());
                 Task.Delay(1000).Wait();
                 lblResultado.Text = valorActual;
             }
