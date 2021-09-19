@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\Entidades\\MiCalculadora\\MiCalculadora.csproj",
+      "projectUniqueName": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\TP1\\MiCalculadora\\MiCalculadora.csproj",
       "projectName": "MiCalculadora",
-      "projectPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\Entidades\\MiCalculadora\\MiCalculadora.csproj",
+      "projectPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\TP1\\MiCalculadora\\MiCalculadora.csproj",
       "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\Entidades\\MiCalculadora\\obj\\",
+      "outputPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\TP1\\MiCalculadora\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\Entidades\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\Entidades\\Entidades\\Entidades.csproj"
+            "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\TP1\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\elian\\source\\repos\\tps_laboratorio_ii\\TP1\\Entidades\\Entidades.csproj"
             }
           }
         }
