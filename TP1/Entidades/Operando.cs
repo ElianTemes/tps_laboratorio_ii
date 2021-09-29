@@ -33,17 +33,9 @@ namespace Entidades
         /// a Double y asigna el valor al atributo de clase numero, caso contrario, asigna 0
         /// </summary>
         /// <param name="numero"></param>
-        public Operando(string numero)
+        public Operando(string numero) 
         {
-            if (Double.TryParse(numero, out _))
-            {
-                this.numero = Convert.ToDouble(numero);
-            }
-            else
-            {
-                this.numero = 0;
-            }
-       
+            this.numero = ValidarOperando(numero);
         }
         /// <summary>
         /// Valida el operando recibiendo una string y comprobando si esta compuesta por solamente numeros, si es valido
@@ -53,11 +45,8 @@ namespace Entidades
         /// <returns></returns>
         private double ValidarOperando(string strNumero)
         {
-            if(Double.TryParse(strNumero, out double num))
-            {
-                return num;
-            }
-            return 0;
+            double.TryParse(strNumero, out double num);
+            return num;            
         }
         /// <summary>
         /// Propiedad de Operando.numero, valida que lo que se le pasa sea un double y lo setea, caso contrario setea 0
