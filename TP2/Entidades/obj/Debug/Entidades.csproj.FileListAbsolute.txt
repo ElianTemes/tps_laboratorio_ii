@@ -17,3 +17,9 @@ C:\Users\elian\source\repos\tps_laboratorio_ii\TP02\Entidades\obj\Debug\Entidade
 C:\Users\elian\source\repos\tps_laboratorio_ii\TP02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\elian\source\repos\tps_laboratorio_ii\TP02\Entidades\obj\Debug\Entidades.dll
 C:\Users\elian\source\repos\tps_laboratorio_ii\TP02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.dll
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.dll
+C:\Users\elian\source\repos\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.pdb
